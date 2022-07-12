@@ -22,6 +22,8 @@ h2 {
 }
 
 main {
+  /* make this the containing block */
+  position: relative;
   padding-top: 64px;
   isolation: isolate;
   max-width: 100%;
@@ -163,6 +165,17 @@ a {
 
 @media (max-width: 825px) {
   main {
-    overflow: hidden; //to make sure we have sticky works when its larger than 825px
+    /* to make sure we have sticky works when its larger than 825px */
+    overflow: hidden;
   }
+}
+
+.centered-stuff.floating {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.centered-stuff.floating .max-width-wrapper {
+  height: 100%;
 }
